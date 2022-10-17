@@ -1,7 +1,9 @@
 import Router from "next/router";
-import { FC, useEffect, useState } from "react";
+import { FC, memo, useEffect, useState } from "react";
 
 const Header2: FC = () => {
+  console.log("Routerの方を描画");
+
   const [path, setPath] = useState<string>();
 
   useEffect(() => {
@@ -16,4 +18,4 @@ const Header2: FC = () => {
   );
 };
 
-export default Header2;
+export default memo(Header2);
